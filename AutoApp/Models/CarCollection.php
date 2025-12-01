@@ -27,6 +27,11 @@ class CarCollection implements Iterator{
     public function count(): int{
         return count($this->cars);
     }
+
+    public function last(): ?Car{
+        if(empty($this->cars)) return null;
+        return $this->cars[count($this->cars) - 1];
+    }
 }
 
 
